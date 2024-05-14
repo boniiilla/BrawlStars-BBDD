@@ -31,7 +31,7 @@ CREATE TABLE gadgets (
     id_gadget INT AUTO_INCREMENT,
     id_pers INT,
     nom_gadget VARCHAR(24),
-    descripcio TEXT
+    descripcio TEXT,
     PRIMARY KEY(id_gadget, id_pers),
     FOREIGN KEY (id_pers) REFERENCES personatges(id)
 );
