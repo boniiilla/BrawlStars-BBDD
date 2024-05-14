@@ -3,8 +3,26 @@ CREATE DATABASE IF NOT EXISTS brawl;
 
 USE brawl;
 
+CREATE TABLE rarezas (
+    id_rareza INT AUTO_INCREMENT PRIMARY KEY,
+    nom_rareza VARCHAR(24),
+    color VARCHAR(24)
+);
+
+CREATE TABLE tipus (
+    id_tipus INT AUTO_INCREMENT PRIMARY KEY,
+    nom_tipus VARCHAR(36),
+    descripcio TEXT
+);
+
 CREATE TABLE personatges (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nompers VARCHAR(24),
-    foto LONGBLOB
+    nom VARCHAR(24),
+    id_rareza INT,
+    id_tipus INT,
+    foto LONGBLOB,
+    audio VARCHAR(64),
+    descripcio TEXT
+    FOREIGN KEY (id_rareza) REFERENCES rarezas(id_rareza),
+    FOREIGN KEY (id_tipus) REFERENCES tipus(id_tipus)
 );
