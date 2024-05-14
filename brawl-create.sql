@@ -35,3 +35,8 @@ CREATE TABLE gadgets (
     PRIMARY KEY(id_gadget, id_pers),
     FOREIGN KEY (id_pers) REFERENCES personatges(id)
 );
+
+CREATE TABLE reforcos (
+    id_ref INT AUTO_INCREMENT PRIMARY KEY,
+    nom_ref VARCHAR(24)
+);
