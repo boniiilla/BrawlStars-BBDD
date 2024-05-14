@@ -40,3 +40,12 @@ CREATE TABLE reforcos (
     id_ref INT AUTO_INCREMENT PRIMARY KEY,
     nom_ref VARCHAR(24)
 );
+
+CREATE TABLE habilitats_estelars (
+    id_habest INT AUTO_INCREMENT,
+    id_pers INT,
+    nom_habest VARCHAR(24),
+    descripcio TEXT,
+    PRIMARY KEY(id_habest, id_pers),
+    FOREIGN KEY (id_pers) REFERENCES personatges(id)
+);
