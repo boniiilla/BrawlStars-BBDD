@@ -231,23 +231,23 @@ WHERE id = 6;
 
 -- Dynamike --
 UPDATE personatges
-SET foto = LOAD_FILE('/var/lib/mysql-files/dynamyke.jpeg')
+SET foto = LOAD_FILE('/var/lib/mysql-files/dinamyke.jpeg')
 WHERE id = 7;
 
-SELECT foto FROM personatges WHERE id = 7 INTO DUMPFILE '/tmp/dynamyke.jpeg';
+SELECT foto FROM personatges WHERE id = 7 INTO DUMPFILE '/tmp/dynamike.jpeg';
 
 UPDATE personatges
-SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/dynamyke.jpeg')),1,10))
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/dinamyke.jpeg')),1,10))
 WHERE id = 7;
 
 UPDATE personatges
-SET audio = LOAD_FILE('/var/lib/mysql-files/Dynamyke.m4a')
+SET audio = LOAD_FILE('/var/lib/mysql-files/Dinamyke.m4a')
 WHERE id = 7;
 
 SELECT audio FROM personatges WHERE id = 7 INTO DUMPFILE '/tmp/dynamike.m4a';
 
 UPDATE personatges
-SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Dynamyke.m4a')),1,10))
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Dinamyke.m4a')),1,10))
 WHERE id = 7;
 
 -- Tick --
@@ -556,13 +556,13 @@ SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/crow.jpeg')),1,10
 WHERE id = 22;
 
 UPDATE personatges
-SET audio = LOAD_FILE('/var/lib/mysql-files/Crow.m4a')
+SET audio = LOAD_FILE('/var/lib/mysql-files/Crowl.m4a')
 WHERE id = 22;
 
 SELECT audio FROM personatges WHERE id = 22 INTO DUMPFILE '/tmp/crow.m4a';
 
 UPDATE personatges
-SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Crow.m4a')),1,10))
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Crowl.m4a')),1,10))
 WHERE id = 22;
 
 -- Surge --
