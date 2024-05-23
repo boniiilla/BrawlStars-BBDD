@@ -133,6 +133,16 @@ UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/poco.jpeg')),1,10))
 WHERE id = 2;
 
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Poco.m4a')
+WHERE id = 2;
+
+SELECT audio FROM personatges WHERE id = 2 INTO DUMPFILE '/tmp/poco.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Poco.m4a')),1,10))
+WHERE id = 2;
+
 -- Primo --
 UPDATE personatges
 SET foto = LOAD_FILE('/var/lib/mysql-files/primo.jpeg')
@@ -142,6 +152,16 @@ SELECT foto FROM personatges WHERE id = 3 INTO DUMPFILE '/tmp/primo.jpeg';
 
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/primo.jpeg')),1,10))
+WHERE id = 3;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Primo.m4a')
+WHERE id = 3;
+
+SELECT audio FROM personatges WHERE id = 3 INTO DUMPFILE '/tmp/primo.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Primo.m4a')),1,10))
 WHERE id = 3;
 
 -- Nita --
@@ -155,6 +175,16 @@ UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/nita.jpeg')),1,10))
 WHERE id = 4;
 
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Nita.m4a')
+WHERE id = 4;
+
+SELECT audio FROM personatges WHERE id = 4 INTO DUMPFILE '/tmp/nita.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Nita.m4a')),1,10))
+WHERE id = 4;
+
 -- Bull --
 UPDATE personatges
 SET foto = LOAD_FILE('/var/lib/mysql-files/bull.jpeg')
@@ -164,6 +194,16 @@ SELECT foto FROM personatges WHERE id = 5 INTO DUMPFILE '/tmp/bull.jpeg';
 
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/bull.jpeg')),1,10))
+WHERE id = 5;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Bull.m4a')
+WHERE id = 5;
+
+SELECT audio FROM personatges WHERE id = 5 INTO DUMPFILE '/tmp/bull.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Bull.m4a')),1,10))
 WHERE id = 5;
 
 -- Brock --
@@ -177,6 +217,16 @@ UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/brock.jpeg')),1,10))
 WHERE id = 6;
 
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Brock.m4a')
+WHERE id = 6;
+
+SELECT audio FROM personatges WHERE id = 6 INTO DUMPFILE '/tmp/brock.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Brock.m4a')),1,10))
+WHERE id = 6;
+
 -- Dynamike --
 UPDATE personatges
 SET foto = LOAD_FILE('/var/lib/mysql-files/dynamyke.jpeg')
@@ -186,6 +236,16 @@ SELECT foto FROM personatges WHERE id = 7 INTO DUMPFILE '/tmp/dynamyke.jpeg';
 
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/dynamyke.jpeg')),1,10))
+WHERE id = 7;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Dynamyke.m4a')
+WHERE id = 7;
+
+SELECT audio FROM personatges WHERE id = 7 INTO DUMPFILE '/tmp/dynamike.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Dynamyke.m4a')),1,10))
 WHERE id = 7;
 
 -- Tick --
@@ -199,6 +259,16 @@ UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/tick.jpeg')),1,10))
 WHERE id = 8;
 
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Tick.m4a')
+WHERE id = 8;
+
+SELECT audio FROM personatges WHERE id = 8 INTO DUMPFILE '/tmp/tick.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Tick.m4a')),1,10))
+WHERE id = 8;
+
 -- 8-Bit --
 UPDATE personatges
 SET foto = LOAD_FILE('/var/lib/mysql-files/8-bit.jpeg')
@@ -208,6 +278,16 @@ SELECT foto FROM personatges WHERE id = 9 INTO DUMPFILE '/tmp/8-bit.jpeg';
 
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/8-bit.jpeg')),1,10))
+WHERE id = 9;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/8-Bit.m4a')
+WHERE id = 9;
+
+SELECT audio FROM personatges WHERE id = 9 INTO DUMPFILE '/tmp/8-Bit.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/8-Bit.m4a')),1,10))
 WHERE id = 9;
 
 INSERT INTO gadgets (id_pers, nom_gadget, descripcio)
