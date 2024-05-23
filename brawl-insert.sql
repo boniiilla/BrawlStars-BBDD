@@ -61,5 +61,5 @@ INSERT INTO personatges(id, nom, id_rareza, id_tipus, descripcio)
 SELECT id, nom, id_rareza, id_tipus, descripcio FROM temp_pers;
 
 UPDATE personatges
-SET foto = LOAD_FILE('/var/lib/mysql-files/shelly.jpeg')
+SET foto = HEX(LOAD_FILE('/var/lib/mysql-files/shelly.jpeg'))
 WHERE id = 1;
