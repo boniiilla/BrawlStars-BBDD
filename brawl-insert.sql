@@ -493,13 +493,13 @@ SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/señorP.jpeg')),1
 WHERE id = 19;
 
 UPDATE personatges
-SET audio = LOAD_FILE('/var/lib/mysql-files/SeñorP.m4a')
+SET audio = LOAD_FILE('/var/lib/mysql-files/señorP.m4a')
 WHERE id = 19;
 
 SELECT audio FROM personatges WHERE id = 19 INTO DUMPFILE '/tmp/señorp.m4a';
 
 UPDATE personatges
-SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/SeñorP.m4a')),1,10))
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/señorP.m4a')),1,10))
 WHERE id = 19;
 
 -- Squeak --
