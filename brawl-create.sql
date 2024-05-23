@@ -49,3 +49,29 @@ CREATE TABLE habilitats_estelars (
     PRIMARY KEY(id_habest, id_pers),
     FOREIGN KEY (id_pers) REFERENCES personatges(id)
 );
+
+CREATE TABLE hipercarga (
+    id_hiper INT AUTO_INCREMENT,
+    id_pers INT,
+    nom_hiper VARCHAR(24),
+    descripcio TEXT,
+    PRIMARY KEY (id_hiper, id_pers),
+    FOREIGN KEY (id_pers) REFERENCES personatges(id)
+);
+
+CREATE TABLE forza_brawler (
+    id_forza INT AUTO_INCREMENT,
+    id_pers INT,
+    vida INT,
+    dany INT,
+    id_gadget INT,
+    id_ref INT,
+    id_habest INT,
+    id_hiper INT,
+    PRIMARY KEY (id_forza, id_pers),
+    FOREIGN KEY (id_pers) REFERENCES personatges(id),
+    FOREIGN KEY (id_gadget) REFERENCES gadgets(id_gadget),
+    FOREIGN KEY (id_ref) REFERENCES reforcos(id_ref),
+    FOREIGN KEY (id_habest) REFERENCES habilitats_estelars(id_habest),
+    FOREIGN KEY (id_hiper) REFERENCES hipercarga(id_hiper)
+);
