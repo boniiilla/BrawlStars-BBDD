@@ -92,3 +92,36 @@ SELECT foto FROM personatges WHERE id = 3 INTO DUMPFILE '/tmp/primo.jpeg';
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/primo.jpeg')),1,10))
 WHERE id = 3;
+
+-- Nita --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/nita.jpeg')
+WHERE id = 4;
+
+SELECT foto FROM personatges WHERE id = 4 INTO DUMPFILE '/tmp/nita.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/nita.jpeg')),1,10))
+WHERE id = 4;
+
+-- Bull --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/bull.jpeg')
+WHERE id = 5;
+
+SELECT foto FROM personatges WHERE id = 5 INTO DUMPFILE '/tmp/bull.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/bull.jpeg')),1,10))
+WHERE id = 5;
+
+-- Brock --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/brock.jpeg')
+WHERE id = 6;
+
+SELECT foto FROM personatges WHERE id = 6 INTO DUMPFILE '/tmp/brock.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/brock.jpeg')),1,10))
+WHERE id = 6;
