@@ -32,3 +32,7 @@ LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/personatges.csv'
 FIELDS TERMINATED BY '\t' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (nom, @dummy, @dummy, nom_tipus, nom_rareza, descripcio);
+
+UPDATE temp_pers tp
+SET tp.id_rareza = r.id_rareza
+INNER JOIN rarezas r ON r.nom_rareza = tp.nom_rareza; 
