@@ -1,35 +1,11 @@
 USE brawl;
 
-LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/personatges.csv' INTO TABLE rarezas
+LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/rarezas.csv' INTO TABLE rarezas
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(@dummy, @dummy, @dummy, @dummy, nom_rareza);
+(nom_rareza, color)
 
-UPDATE rarezas
-SET color = "Gris"
-WHERE nom_rareza = "Comun";
-
-UPDATE rarezas
-SET color = "Verde"
-WHERE nom_rareza = "Especial";
-
-UPDATE rarezas
-SET color = "Azul"
-WHERE nom_rareza = "SuperEspecial";
-
-UPDATE rarezas
-SET color = "Morado"
-WHERE nom_rareza = "Epico";
-
-UPDATE rarezas
-SET color = "Rojo"
-WHERE nom_rareza = "Mitico";
-
-UPDATE rarezas
-SET color = "Amarillo"
-WHERE nom_rareza = "Legendario";
-
-LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/personatges.csv' INTO TABLE tipus
+LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/tipus.csv' INTO TABLE tipus
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(@dummy, @dummy, @dummy, nom_tipus);
+(nom_tipus, descripcio);
