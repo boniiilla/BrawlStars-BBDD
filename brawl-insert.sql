@@ -292,59 +292,62 @@ WHERE id_forza >= 8;
 UPDATE forza_brawler
 SET id_ref2 = 
     CASE 
-        WHEN id_pers = 1 THEN (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 1 and id_forza >= 10) ORDER BY RAND() LIMIT 1)
+        WHEN id_pers = 1 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 1 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 2 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 2) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 2 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 3 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 3) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 3 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 4 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 4) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 4 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 5 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 5) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 5 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 6 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 6) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 6 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 7 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 7) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 7 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 8 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 8) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 8 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 9 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 9) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 9 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 10 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 10 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 11 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 11) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 11 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 12 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 12) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 12 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 13 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 13) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 13 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 14 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 14) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 14 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 15 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 15) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 15 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 16 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 16) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 16 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 17 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 17) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 17 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 18 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 18) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 18 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 19 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 19) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 19 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 20 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 20) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 20 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 21 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 21) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 21 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 22 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 22) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 22 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 23 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 23) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 23 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 24 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 24) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 24 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 25 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 25) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 25 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 26 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 26) ORDER BY RAND() LIMIT 1) AS refuerzos)
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 26 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
     END
 WHERE id_forza >= 10;
 
 -- Aqui acabn los update para los gadget, refuerzos, hab estelares y hipercarga si tienen
+
+SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
+            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 1 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos
