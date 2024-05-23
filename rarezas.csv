@@ -1,7 +1,7 @@
-rareza	color
-Comun	Gris
-Especial	Verde
-SuperEspecial	Azul
-Epico	Morado
-Mitico	Rojo
-Legendario	Amarillo
+rareza:color
+Comun:Gris
+Especial:Verde
+SuperEspecial:Azul
+Epico:Morado
+Mitico:Rojo
+Legendario:Amarillo
