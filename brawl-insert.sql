@@ -290,6 +290,205 @@ UPDATE personatges
 SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/8-Bit.m4a')),1,10))
 WHERE id = 9;
 
+-- Carl --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/carl.jpeg')
+WHERE id = 10;
+
+SELECT foto FROM personatges WHERE id = 10 INTO DUMPFILE '/tmp/carl.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/carl.jpeg')),1,10))
+WHERE id = 10;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Carl.m4a')
+WHERE id = 10;
+
+SELECT audio FROM personatges WHERE id = 10 INTO DUMPFILE '/tmp/carl.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Carl.m4a')),1,10))
+WHERE id = 10;
+
+-- Penny --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/penny.jpeg')
+WHERE id = 11;
+
+SELECT foto FROM personatges WHERE id = 11 INTO DUMPFILE '/tmp/penny.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/penny.jpeg')),1,10))
+WHERE id = 11;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Penny.m4a')
+WHERE id = 11;
+
+SELECT audio FROM personatges WHERE id = 11 INTO DUMPFILE '/tmp/penny.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Penny.m4a')),1,10))
+WHERE id = 11;
+
+-- Edgar --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/edgar.jpeg')
+WHERE id = 12;
+
+SELECT foto FROM personatges WHERE id = 12 INTO DUMPFILE '/tmp/edgar.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/edgar.jpeg')),1,10))
+WHERE id = 12;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Edgar.m4a')
+WHERE id = 12;
+
+SELECT audio FROM personatges WHERE id = 12 INTO DUMPFILE '/tmp/edgar.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Edgar.m4a')),1,10))
+WHERE id = 12;
+
+-- Nani --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/nani.jpeg')
+WHERE id = 13;
+
+SELECT foto FROM personatges WHERE id = 13 INTO DUMPFILE '/tmp/nani.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/nani.jpeg')),1,10))
+WHERE id = 13;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Nani.m4a')
+WHERE id = 13;
+
+SELECT audio FROM personatges WHERE id = 13 INTO DUMPFILE '/tmp/nani.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Nani.m4a')),1,10))
+WHERE id = 13;
+
+-- Frank --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/frank.jpeg')
+WHERE id = 14;
+
+SELECT foto FROM personatges WHERE id = 14 INTO DUMPFILE '/tmp/frank.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/frank.jpeg')),1,10))
+WHERE id = 14;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Frank.m4a')
+WHERE id = 14;
+
+SELECT audio FROM personatges WHERE id = 14 INTO DUMPFILE '/tmp/frank.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Frank.m4a')),1,10))
+WHERE id = 14;
+
+-- Piper --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/piper.jpeg')
+WHERE id = 15;
+
+SELECT foto FROM personatges WHERE id = 15 INTO DUMPFILE '/tmp/piper.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/piper.jpeg')),1,10))
+WHERE id = 15;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Piper.m4a')
+WHERE id = 15;
+
+SELECT audio FROM personatges WHERE id = 15 INTO DUMPFILE '/tmp/piper.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Piper.m4a')),1,10))
+WHERE id = 15;
+
+-- Hank --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/hank.jpeg')
+WHERE id = 16;
+
+SELECT foto FROM personatges WHERE id = 16 INTO DUMPFILE '/tmp/hank.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/hank.jpeg')),1,10))
+WHERE id = 16;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Hank.m4a')
+WHERE id = 16;
+
+SELECT audio FROM personatges WHERE id = 16 INTO DUMPFILE '/tmp/hank.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Hank.m4a')),1,10))
+WHERE id = 16;
+
+-- Genio --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/genio.jpeg')
+WHERE id = 17;
+
+SELECT foto FROM personatges WHERE id = 17 INTO DUMPFILE '/tmp/genio.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/genio.jpeg')),1,10))
+WHERE id = 17;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Genio.m4a')
+WHERE id = 17;
+
+SELECT audio FROM personatges WHERE id = 17 INTO DUMPFILE '/tmp/genio.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Genio.m4a')),1,10))
+WHERE id = 17;
+
+-- Byron --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/byron.jpeg')
+WHERE id = 18;
+
+SELECT foto FROM personatges WHERE id = 18 INTO DUMPFILE '/tmp/byron.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/byron.jpeg')),1,10))
+WHERE id = 18;
+
+UPDATE personatges
+SET audio = LOAD_FILE('/var/lib/mysql-files/Byron.m4a')
+WHERE id = 18;
+
+SELECT audio FROM personatges WHERE id = 18 INTO DUMPFILE '/tmp/byron.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Byron.m4a')),1,10))
+WHERE id = 18;
+
+-- Señor P --
+-- Squeak --
+-- Mico --
+-- Crow --
+-- Surge --
+-- Sandy --
+-- Kit --
+-- Leon --
+
+
 INSERT INTO gadgets (id_pers, nom_gadget, descripcio)
 SELECT p.id, tg.nom_gadget, tg.descripcio
 FROM temp_gadgets tg
