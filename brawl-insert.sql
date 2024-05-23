@@ -28,3 +28,15 @@ LOAD DATA LOCAL INFILE '/home/usuari/personatges.csv' INTO TABLE temp_pers
 FIELDS TERMINATED BY '\t' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (nom, @dummy, @dummy, nom_tipus, nom_rareza, descripcio);
+
+DROP TEMPORARY TABLE IF EXISTS temp_rare;
+CREATE TEMPORARY TABLE IF NOT EXISTS temp_rare (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_rareza INT
+);
+
+INSERT INTO temp_rare(id, id_rareza)
+SELECT temp_pers.id, rarezas.id_rareza
+  FROM temp_pers
+  JOIN rarezas ON temp_pers.nom_rareza = rarezas.nom_rarezas;
+ 
