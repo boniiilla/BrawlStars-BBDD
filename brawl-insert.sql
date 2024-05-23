@@ -244,6 +244,7 @@ insert into forza_brawler(id_pers,nivell) values (2,7);
 insert into forza_brawler(id_pers,nivell) values (1,10);
 -- Aqui acabn los insert para los gadget, refuerzos, hab estelares y hipercarga si tienen
 
+-- Gadgets
 UPDATE forza_brawler fb
 JOIN (
     SELECT g.id_gadget, g.id_pers 
@@ -253,6 +254,7 @@ JOIN (
 SET fb.id_gadget = g.id_gadget
 WHERE fb.nivell >= 7;
 
+-- Habilidad estelar
 UPDATE forza_brawler fb
 JOIN (
     SELECT id_habest, he.id_pers 
@@ -262,6 +264,7 @@ JOIN (
 SET fb.id_habest = he.id_habest
 WHERE fb.nivell >= 9;
 
+-- Hipercarga
 UPDATE forza_brawler fb
 JOIN (
     SELECT id_hiper, id_pers 
@@ -271,6 +274,7 @@ JOIN (
 SET fb.id_hiper = hc.id_hiper
 WHERE fb.nivell = 11;
 
+-- Reforços
 UPDATE forza_brawler
 SET id_ref1 = (
     SELECT id_ref
