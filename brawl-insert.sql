@@ -49,7 +49,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS temp_rare (
     id_tipus INT
 );
 
-INSERT INTO temp_rare(id, id_rareza)
+INSERT INTO temp_tip(id, id_rareza)
 SELECT temp_pers.id, tipus.id_tipus
   FROM temp_pers
   JOIN tipus ON temp_pers.nom_tipus = tipus.nom_tipus;
