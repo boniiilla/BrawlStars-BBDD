@@ -1,6 +1,6 @@
 perso	nom	desc
-Shelly 	Paso al frente	Shelly arremete hacia adelante¡con una velocidad envidiable!
-Shelly 	Tiro al plato	Durante los 5 siguientes segundos, el ataque de selly sube
+Shelly	Paso al frente	Shelly arremete hacia adelante¡con una velocidad envidiable!
+Shelly	Tiro al plato	Durante los 5 siguientes segundos, el ataque de selly sube
 Poco	Diapason	Poco y todos los aliados se curan.
 Poco	Cancion Protectora	Elimina los efectos de los brawlers durante 4 segundos.
 Primo	Cinturion de Asteroides	El primo invoca un meteorito que hace 1000 de daño.
@@ -29,23 +29,23 @@ Frank	Cancelación de Ruido	Frank puede volverse inmune momentáneamente a todo 
 Frank	Atracción irresistible	El siguiente ataque de Frank atraerá a los rivales hacia él y les hará el doble de daño. Municiones por partida
 Piper	Autodisparo	Piper dispara un tiro que infringe 170 puntos de daño ,al enemigo mas cercano, lo empuja hacia atrás y lo ralentiza.
 Piper	Truco secreto	El siguiente ataque principal de Piper se dirigirá a los enemigos.
-Hank		
-Hank		
-Genio		
-Genio		
-Byron		
-Byron		
-Señor P		
-Señor P		
-Squeak		
-Squeak		
-Mico		
-Mico		
+Hank	Globos de agua	el siguiente globo explosivo también ralentiza a los enemigos durante 3 segundos.
+Hank	Barricada	Hank recibe un 40% menos de daño por 3 segundos.
+Genio	Aléjate Sésamo	Todos los enemigos que se encuentran cerca de Genio se ven empujados hacia atrás al momento. Si hay por lo menos un brawler enemigo cerca, Genio también recuperará un 10% de los puntos de salud máximos.
+Genio	Espíritus Vengativos	Genio dispara un misil a todos los rivales que estén al descubierto en un área extensa, infligiendo hasta 1600 puntos de daño dependiendo de la distancia.
+Byron	Automedicación	Byron usa una de sus inyecciones en sí mismo para recuperar 1200 puntos de salud por segundo durante 3 segundos.
+Byron	Inyecciones de refuerzo	El siguiente ataque de Byron dispara 3 dardos en vez de uno, y cada uno inflige un 20% menos de daño, y cura un 40% menos.
+Señor P	Campana de Servicio	El señor P fortalece a su botones actual, dotándole 228puntos más de daño y 1360 puntos más de salud.
+Señor P	Botones de Refuerzo	El siguiente ataque hará que aparezca un botones más débbil en la zona donde aterrize el ataque.
+Squeak	Pegajosidad	La siguiente bomba viscosa de Squeak inflige un 50% más de daño y tiene un alcance un 100% mayor.
+Squeak	Residuo	La siguiente bomba viscosa de Squeak deja un área residual tras su explosion que ralentiza a los enemigos y permite ver a traves de los arbustos durante 6 segundos.
+Mico	Rompetímpanos	Mico da un grito ensordecedor hacia el enemigo más cercano, le inflige 545 puntos de daño y lo ralentiza durante 2 segundos al impactar.
+Mico	Presto	El alcance del próximo salto de Mico es un 34% mayor.
 Crow	Plumaje protector	Crow recibe un escudo que proteje del 40% del daño que recibe durante 3 segundos
 Crow	Toxina relentizante	Lanza unas puas toxicas que relentizan al oponente durante 3 segundos
-Surge	Hiperactividad	Aumenta el nivel de los circuitos durante 10 segundos 
+Surge	Hiperactividad	Aumenta el nivel de los circuitos durante 10 segundos
 Surge	Escudo de fuerza	En los siguientes 2 segundos, surge crea un muro massivo que impide que los jugadores puedan pasar
-Sandy	Pastillas par dormir 	Sandy se duerme durante 1,5 segundos y su salud se restaura por completo
+Sandy	Pastillas par dormir	Sandy se duerme durante 1,5 segundos y su salud se restaura por completo
 Sandy	Dulces Sueños	El siguiente ataque de sandy adormece a los rivales durante 1,0 segundos. Se despertaran cuando reciban daño
 Kit	Caja de cartón	Se esconde en una caja de carton que crea durante 3 segundos
 Kit	Hamburguesa de queso	Se cura a su mismo y al brawler al que esté subido un 40½ del puntos de salud
