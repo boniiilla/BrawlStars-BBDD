@@ -65,3 +65,7 @@ SET foto = LOAD_FILE('/var/lib/mysql-files/shelly.jpeg')
 WHERE id = 1;
 
 SELECT foto FROM personatges WHERE id = 1 INTO DUMPFILE '/tmp/shelly.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/shelly.jpeg')),1,10))
+WHERE id = 1;
