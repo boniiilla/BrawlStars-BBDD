@@ -34,5 +34,5 @@ IGNORE 1 LINES
 (nom, @dummy, @dummy, nom_tipus, nom_rareza, descripcio);
 
 UPDATE temp_pers tp
-SET tp.id_rareza = r.id_rareza
+SET id_rareza = r.id_rareza
 INNER JOIN rarezas r ON r.nom_rareza = tp.nom_rareza; 
