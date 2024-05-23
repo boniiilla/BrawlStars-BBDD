@@ -232,7 +232,7 @@ INSERT INTO forza_brawler (id_forza, id_pers, vida, dany)
 SELECT fuerza, id_pers, vida, dany FROM temp_nivel tn
 JOIN personatges p ON tn.nom_pers = p.nom;
 
--- Aqui se ponen los insert los gadget, refuerzos, hab estelares y hipercarga si tienen
+-- Aqui se ponen los update los gadget, refuerzos, hab estelares y hipercarga si tienen
 
 -- Gadgets
 UPDATE forza_brawler fb
@@ -355,4 +355,4 @@ SET id_ref2 =
     END
 WHERE id_forza >= 10;
 
--- Aqui acabn los insert para los gadget, refuerzos, hab estelares y hipercarga si tienen
+-- Aqui acabn los update para los gadget, refuerzos, hab estelares y hipercarga si tienen
