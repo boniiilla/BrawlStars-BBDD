@@ -116,6 +116,12 @@ UPDATE personatges
 SET audio = LOAD_FILE('/var/lib/mysql-files/Shelly.m4a')
 WHERE id = 1;
 
+SELECT audio FROM personatges WHERE id = 1 INTO DUMPFILE '/tmp/shelly.m4a';
+
+UPDATE personatges
+SET audio = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/Shelly.m4a')),1,10))
+WHERE id = 1;
+
 -- Poco --
 UPDATE personatges
 SET foto = LOAD_FILE('/var/lib/mysql-files/poco.jpeg')
