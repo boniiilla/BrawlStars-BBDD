@@ -1,6 +1,7 @@
 USE brawl;
 
 LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/rarezas.csv' INTO TABLE rarezas
+CHARACTER SET utf8
 FIELDS TERMINATED BY ':' ENCLOSED BY '"' LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (nom_rareza, color);
