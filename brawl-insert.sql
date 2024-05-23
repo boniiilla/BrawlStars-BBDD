@@ -16,7 +16,7 @@ IGNORE 1 LINES
 (nom_tipus, descripcio);
 
 DROP TEMPORARY IF EXISTS temp_pers;
-CREATE TEMPORARY  TABLE IF NOT EXISTS temp_pers (
+CREATE TEMPORARY TABLE IF NOT EXISTS temp_pers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(24),
     id_rareza INT,
