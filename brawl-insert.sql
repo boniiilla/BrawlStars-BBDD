@@ -229,7 +229,7 @@ IGNORE 1 LINES
 (fuerza, nom_pers, vida, dany);
 
 INSERT INTO forza_brawler (id_forza, id_pers, vida, dany)
-SELECT fuerza, id_pers, vida, dany FROM temp_nivel tn
+SELECT fuerza, id, vida, dany FROM temp_nivel tn
 JOIN personatges p ON tn.nom_pers = p.nom;
 
 -- Aqui se ponen los update los gadget, refuerzos, hab estelares y hipercarga si tienen
