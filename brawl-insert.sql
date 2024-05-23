@@ -310,9 +310,9 @@ WHERE nivell >= 8;
 UPDATE forza_brawler fb
 SET id_ref2 = 
     CASE 
-        WHEN id_pers = 1 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref IS NOT (
+        WHEN id_pers = 1 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref != (
             SELECT id_ref1 FROM forza_brawler WHERE nivell >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
-        WHEN id_pers = 2 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref IS NOT (
+        WHEN id_pers = 2 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref != (
             SELECT id_ref1 FROM forza_brawler WHERE nivell >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 3 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
             SELECT id_ref1 FROM forza_brawler WHERE nivell >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos)
