@@ -348,6 +348,3 @@ SET id_ref2 =
 WHERE id_forza >= 10;
 
 -- Aqui acabn los update para los gadget, refuerzos, hab estelares y hipercarga si tienen
-
-SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
-            SELECT id_ref1 FROM forza_brawler WHERE id_pers = 1 and id_forza >= 10) ORDER BY RAND() LIMIT 1) AS refuerzos
