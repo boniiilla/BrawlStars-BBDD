@@ -248,7 +248,12 @@ WHERE fb.id_forza >= 9;
 
 -- Hipercarga
 UPDATE forza_brawler fb
-SET id_hiper = (SELECT id_hiper FROM hipercarga WHERE fb.id_pers = hipercarga.id_pers)
+JOIN (
+    SELECT id_hiper, id_pers 
+    FROM hipercarga 
+    ORDER BY RAND()
+) hc ON fb.id_pers = hc.id_pers
+SET fb.id_hiper = hc.id_hiper
 WHERE fb.id_forza = 11;
 
 -- Reforços
