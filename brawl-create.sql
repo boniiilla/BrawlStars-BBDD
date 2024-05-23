@@ -62,9 +62,8 @@ CREATE TABLE hipercarga (
 );
 
 CREATE TABLE forza_brawler (
-    id_forza INT AUTO_INCREMENT,
+    id_forza INT,
     id_pers INT,
-    nivell INT,
     vida INT,
     dany INT,
     id_gadget INT,

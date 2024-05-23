@@ -215,34 +215,24 @@ SELECT p.id, hc.nom, hc.descripcio
 FROM temp_hipercargas hc
 JOIN personatges p ON hc.perso = p.nom;
 
+DROP TEMPORARY TABLE IF EXISTS temp_nivel;
+CREATE TEMPORARY TABLE IF NOT EXISTS temp_nivel (
+    fuerza INT PRIMARY KEY,
+    nom_pers VARCHAR(24),
+    vida INT,
+    dany INT
+);
+
+LOAD DATA LOCAL INFILE '/home/usuari/nivel_brawl.csv' INTO TABLE temp_nivel
+FIELDS TERMINATED BY '\t' ENCLOSED BY '"' LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(fuerza, nom_pers, vida, dany);
+
+INSERT INTO forza_brawler (id_forza, id_pers, vida, dany)
+SELECT fuerza, id_pers, vida, dany FROM temp_nivel tn
+JOIN personatges p ON tn.nom_pers = p.nom;
+
 -- Aqui se ponen los insert los gadget, refuerzos, hab estelares y hipercarga si tienen
-insert into forza_brawler(id_pers,nivell) values (26,10);
-insert into forza_brawler(id_pers,nivell) values (25,4);
-insert into forza_brawler(id_pers,nivell) values (24,11);
-insert into forza_brawler(id_pers,nivell) values (23,5);
-insert into forza_brawler(id_pers,nivell) values (22,7);
-insert into forza_brawler(id_pers,nivell) values (21,8);
-insert into forza_brawler(id_pers,nivell) values (20,1);
-insert into forza_brawler(id_pers,nivell) values (19,11);
-insert into forza_brawler(id_pers,nivell) values (18,10);
-insert into forza_brawler(id_pers,nivell) values (17,1);
-insert into forza_brawler(id_pers,nivell) values (16,10);
-insert into forza_brawler(id_pers,nivell) values (15,6);
-insert into forza_brawler(id_pers,nivell) values (14,7);
-insert into forza_brawler(id_pers,nivell) values (13,8);
-insert into forza_brawler(id_pers,nivell) values (12,4);
-insert into forza_brawler(id_pers,nivell) values (11,7);
-insert into forza_brawler(id_pers,nivell) values (10,6);
-insert into forza_brawler(id_pers,nivell) values (9,7);
-insert into forza_brawler(id_pers,nivell) values (8,11);
-insert into forza_brawler(id_pers,nivell) values (7,1);
-insert into forza_brawler(id_pers,nivell) values (6,6);
-insert into forza_brawler(id_pers,nivell) values (5,10);
-insert into forza_brawler(id_pers,nivell) values (4,8);
-insert into forza_brawler(id_pers,nivell) values (3,5);
-insert into forza_brawler(id_pers,nivell) values (2,7);
-insert into forza_brawler(id_pers,nivell) values (1,10);
--- Aqui acabn los insert para los gadget, refuerzos, hab estelares y hipercarga si tienen
 
 -- Gadgets
 UPDATE forza_brawler fb
@@ -252,7 +242,7 @@ JOIN (
     ORDER BY RAND()
 ) g ON fb.id_pers = g.id_pers
 SET fb.id_gadget = g.id_gadget
-WHERE fb.nivell >= 7;
+WHERE fb.id_forza >= 7;
 
 -- Habilidad estelar
 UPDATE forza_brawler fb
@@ -262,7 +252,7 @@ JOIN (
     ORDER BY RAND()
 ) he ON fb.id_pers = he.id_pers
 SET fb.id_habest = he.id_habest
-WHERE fb.nivell >= 9;
+WHERE fb.id_forza >= 9;
 
 -- Hipercarga
 UPDATE forza_brawler fb
@@ -272,7 +262,7 @@ JOIN (
     ORDER BY RAND()
 ) hc ON fb.id_pers = hc.id_pers
 SET fb.id_hiper = hc.id_hiper
-WHERE fb.nivell = 11;
+WHERE fb.id_forza = 11;
 
 -- Reforços
 UPDATE forza_brawler fb
@@ -305,7 +295,7 @@ SET id_ref1 =
         WHEN id_pers = 25 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
         WHEN id_pers = 26 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
     END
-WHERE nivell >= 8;
+WHERE id_forza >= 8;
 
 UPDATE forza_brawler fb
 SET id_ref2 = 
@@ -363,5 +353,6 @@ SET id_ref2 =
         WHEN id_pers = 26 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
             SELECT id_ref1 FROM forza_brawler WHERE id_pers = 26) ORDER BY RAND() LIMIT 1) AS refuerzos)
     END
-WHERE nivell >= 10;
+WHERE id_forza >= 10;
 
+-- Aqui acabn los insert para los gadget, refuerzos, hab estelares y hipercarga si tienen
