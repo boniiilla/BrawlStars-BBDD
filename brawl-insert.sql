@@ -44,7 +44,7 @@ UPDATE temp_pers
 SET id_rareza = (SELECT tr.id_rareza FROM temp_rare tr WHERE temp_pers.id = tr.id);
 
 DROP TEMPORARY TABLE IF EXISTS temp_tip;
-CREATE TEMPORARY TABLE IF NOT EXISTS temp_rare (
+CREATE TEMPORARY TABLE IF NOT EXISTS temp_tip (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_tipus INT
 );
