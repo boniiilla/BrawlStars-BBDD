@@ -25,9 +25,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS temp_pers (
     nom_tipus VARCHAR(24),
     foto LONGBLOB,
     audio VARCHAR(64),
-    descripcio TEXT,
-    FOREIGN KEY (id_rareza) REFERENCES rarezas(id_rareza),
-    FOREIGN KEY (id_tipus) REFERENCES tipus(id_tipus)
+    descripcio TEXT
 );
 
 LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/personatges.csv' INTO TABLE temp_pers
