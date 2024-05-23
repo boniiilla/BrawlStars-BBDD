@@ -28,3 +28,8 @@ WHERE nom_rareza = "Mitico";
 UPDATE rarezas
 SET color = "Amarillo"
 WHERE nom_rareza = "Legendario";
+
+LOAD DATA LOCAL INFILE '/home/usuari/compartida/BrawlStars-BBDD/personatges.csv' INTO TABLE tipus
+FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(@dummy, @dummy, @dummy, nom_tipus);
