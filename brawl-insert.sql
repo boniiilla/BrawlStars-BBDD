@@ -125,3 +125,36 @@ SELECT foto FROM personatges WHERE id = 6 INTO DUMPFILE '/tmp/brock.jpeg';
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/brock.jpeg')),1,10))
 WHERE id = 6;
+
+-- Dynamike --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/dynamyke.jpeg')
+WHERE id = 7;
+
+SELECT foto FROM personatges WHERE id = 7 INTO DUMPFILE '/tmp/dynamyke.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/dynamyke.jpeg')),1,10))
+WHERE id = 7;
+
+-- Tick --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/tick.jpeg')
+WHERE id = 8;
+
+SELECT foto FROM personatges WHERE id = 8 INTO DUMPFILE '/tmp/tick.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/tick.jpeg')),1,10))
+WHERE id = 8;
+
+-- 8-Bit --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/8-bit.jpeg')
+WHERE id = 9;
+
+SELECT foto FROM personatges WHERE id = 9 INTO DUMPFILE '/tmp/8-bit.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/8-bit.jpeg')),1,10))
+WHERE id = 9;
