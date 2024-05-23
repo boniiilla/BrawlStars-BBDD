@@ -1,4 +1,4 @@
-perso	nom	desc
+pers	nom	desc
 Shelly	Choque mate	Las superbalas de Shelly ralentizan a los enemigos durante 2 segundos
 Shelly	Primeros auxilios	Cuando la salud de Shelly está por debajo del 40%, recupera 2200 puntos de salud automáticamente. La habilidad tarda 15 segundos en recargarse
 Poco	Musicoterapia	Cuando el ataque de Poco alcanza a los brawlers aliados, estos recuperan 700 puntos de salud
@@ -11,3 +11,43 @@ Bull	Toro furioso	Cuando Bull tiene menos del 60% de salud, es capaz de recargar
 Bull	Tipo duro	Cuando Bull tiene menos del 40% de salud, adquiere un escudo que reduce todo el daño recibido en un 30%.
 Brock	Más cohetes	En la Lluvia explosiva ahora caen un 44% más de cohetes
 Brock	Cuarto Cohete	Brock carga un cuarto cohete en su lanzacohetes, aumentando así su munición. Eso sí, ahora no tendrá dónde guardar el termo
+Dynamike	Dinasalto	Dynamike aprovecha la onda expansiva de sus explosivos para saltar los obstáculos
+Dynamike	Demolición	Dynamike inflige 1600 puntos más de daño al usar su súper.
+8-Bit	Amplificadaño Potenciado	Aumenta el alcance de la torreta amplificadaño en un 50% y potencia el daño un 15%
+8-Bit	Enchufado	Cuando 8-BIT esta cerca de su amplificadaño , se enchufará a él e incrementa su velocidad de movimiento
+Tick	Autorreparación	Cuando Tick no recibe daño ni ataca, su salud se regenera 2 segundos más rápido de lo normal
+Tick	Tic, Tac, Tic, Tac	El tiempo de recarga de Tick es un 9% más corto
+Carl	Lanzamiento veloz	Carl lanza su piqueta un 12% más rápido, por lo que vuelve a sus manos mucho antes.
+Carl	Pirueta protectora	El daño que recibe Carl mientras su súper está activado se reduce en un 30%.
+Penny	Arcas llenas	El cono de la explosión de las bolsas de oro de Penny es un 100% más ancho después de cada golpe
+Penny	Tiroteo masivo	El cañón de Penny inflige 1372 puntos de daño y empuja a los enemigos cercanos al aterrizar
+Frank	Toma de Fuerza	Frank roba el poder de un Brawler que derrota, aumentando su daño en un 50% durante 12 segundos.
+Frank	Esponja	Frank gana +1400 de vida
+Piper	Emboscada	El ataque de Piper inflige +1190 puntos más de daño (desde su alcance máximo) cuando está escondida en un arbusto.
+Piper	Acierta y vencerás	Cuando Piper alcanza a un rival con su ataque, recarga 0.4 de munición al instante.
+Edgar	Aterrizaje Forzoso	El súper de Edgar también inflinge 1000 puntos de daño a los rivales que se encuentren cerca del lugar donde aterrice.
+Edgar	A Puñetazo Limpio	Edgar recupera 25% más de salud del daño que inflinge.
+Nani	Foco Automático	Peep inflige 1600 puntos de daño extras en función de la distancia que recorra
+Nani	Acero Templado	Nani sufre un 80% menos de daño mientras su súper esté activo
+Hank	Va a explotar	Cuando el globo explosivo está cargado un 80%, Hank consigue un 10% de velocidad de movimiento extra.
+Hank	¡A cubierta!	Hank recibe 20% menos de daño cuando está cerca de un muro
+Genio	Curación mágica	Genio regenera 576 puntos de salud por segundo a todos los aliados que se encuentren en su rango.
+Genio	Espíritu enfadado	La Mano mágica del Genio inflige 2000 puntos de daño por golpe a los enemigos.
+Byron	Malestar	El súper de Byron también hace que los rivales consigan un 75% menos de curación de cualquier fuente durante 9 segundos.
+Byron	Inyección	Cada 3,5 segundos, el siguiente ataque básico atravesará a los objetivos.
+Senyor P	Exceso de Equipaje	Cada 4 segundos, el daño de la explosión de la siguiente maleta del señor P aumenta en un 40%.
+Senyor P	Puerta Giratoria	Todos los botones robóticos de la base del señor P ahora tienen un 20% de salud y causan un 30% más de daño.
+Squeak	Reacción en cadena	Cada oponente que esté dentro del radio de explosión de una bomba viscosa aumenta el daño de esta un 15%.
+Squeak	Superviscosas	Las explosiones de bombas viscosas secundarias del súper de Squeak también ralentizan a los rivales durante 4 segundos
+Mico	Asunto de primates	Cada 5 segundos, el ataque base de Mico roba munición a sus enemigos tras golpearlos.
+Mico	Disco de platino	Mico inflige un 100% de daño extra a cualquier cosa que no sea un brawler.
+Crow	Extratóxico	El veneno de Crow debilita la fuerza de los rivales, que, infligen un 15% menos de daño mientras están bajo el efecto del veneno.
+Crow	Cría Cuervos	Crow inflige 120 puntos más de daño con su ataque y su súper a los objetivos que tengan menos del 50% de salud.
+Surge	Maxiboom	El ataque principal de Surge se divide cuando choca contra muros.
+Surge	Ataque Refrescante	Surge mantiene la primera mejora de su súper durante toda la partida.
+Sandy	Arena sepultadora	La tormenta de arena ahora daña a los enemigos que estén dentro de ella con 216 de daño por segundo.
+Sandy	Minerales curativos	La tormenta de arena ahora cura a Sandy y sus aliados por 380 puntos por segundo.
+Kit	Sed de poder	Kit consigue un 200% de fuerza con cada cubo de fuerza
+Kit	Apego excesivo	Kit se sube a los brawlers aliados durante 5 segundos más.
+Leon	Humareda	Cuando Leon despliega su súper, se mueve un 30% más rápido mientras es invisible.
+Leon	Cura Invisible	Cuando tiene el súper activado, Leon recupera 1360 puntos de salud por segundo.
