@@ -24,3 +24,7 @@ CREATE TEMPORARY TABLE IF NOT EXISTS temp_pers (
     descripcio TEXT
 );
 
+LOAD DATA LOCAL INFILE '/home/usuari/personatges.csv' INTO TABLE temp_pers
+FIELDS TERMINATED BY '\t' ENCLOSED BY '"' LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(nom, @dummy, @dummy, nom_tipus, nom_rareza, descripcio);
