@@ -275,17 +275,14 @@ SET fb.id_hiper = hc.id_hiper
 WHERE fb.nivell = 11;
 
 -- Reforços
-UPDATE forza_brawler
-SET id_ref1 = (
-    SELECT id_ref
-    FROM (
-        SELECT id_ref
-        FROM reforcos
-        ORDER BY RAND()
-        LIMIT 1
-    ) AS refuerzos
-)
+UPDATE forza_brawler fb
+SET id_ref1 = 
+    CASE 
+        WHEN id_pers = 1 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+    END
 WHERE nivell >= 8;
+
+
 
 UPDATE forza_brawler
 SET id_ref2 = (
