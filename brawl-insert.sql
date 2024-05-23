@@ -38,5 +38,5 @@ CREATE TEMPORARY TABLE IF NOT EXISTS temp_rare (
 INSERT INTO temp_rare(id, id_rareza)
 SELECT temp_pers.id, rarezas.id_rareza
   FROM temp_pers
-  JOIN rarezas ON temp_pers.nom_rareza = rarezas.nom_rarezas;
+  JOIN rarezas ON temp_pers.nom_rareza = rarezas.nom_rareza;
  
