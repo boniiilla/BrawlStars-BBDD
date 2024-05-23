@@ -56,3 +56,6 @@ SELECT temp_pers.id, tipus.id_tipus
  
 UPDATE temp_pers
 SET id_tipus = (SELECT tt.id_tipus FROM temp_tip tt WHERE temp_pers.id = tt.id);
+
+INSERT INTO personatges(id, nom, id_rareza, id_tipus, descripcio)
+SELECT id, nom, id_rareza, id_tipus, descripcio FROM temp_pers;
