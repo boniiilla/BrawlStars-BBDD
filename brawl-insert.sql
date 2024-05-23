@@ -59,3 +59,7 @@ SET id_tipus = (SELECT tt.id_tipus FROM temp_tip tt WHERE temp_pers.id = tt.id);
 
 INSERT INTO personatges(id, nom, id_rareza, id_tipus, descripcio)
 SELECT id, nom, id_rareza, id_tipus, descripcio FROM temp_pers;
+
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/shelly.jpeg')
+WHERE id = 1;
