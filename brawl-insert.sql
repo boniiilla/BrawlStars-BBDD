@@ -217,10 +217,11 @@ JOIN personatges p ON hc.perso = p.nom;
 
 DROP TEMPORARY TABLE IF EXISTS temp_nivel;
 CREATE TEMPORARY TABLE IF NOT EXISTS temp_nivel (
-    fuerza INT PRIMARY KEY,
+    fuerza INT,
     nom_pers VARCHAR(24),
     vida INT,
-    dany INT
+    dany INT,
+    PRIMARY KEY (fuerza, nom_pers)
 );
 
 LOAD DATA LOCAL INFILE '/home/usuari/nivel_brawl.csv' INTO TABLE temp_nivel
