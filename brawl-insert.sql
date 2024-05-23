@@ -236,13 +236,10 @@ JOIN personatges p ON tn.nom_pers = p.nom;
 -- Aqui se ponen los update los gadget, refuerzos, hab estelares y hipercarga si tienen
 
 -- Gadgets
+
+
 UPDATE forza_brawler fb
-JOIN (
-    SELECT g.id_gadget, g.id_pers 
-    FROM gadgets g
-    ORDER BY RAND()
-) g ON fb.id_pers = g.id_pers
-SET fb.id_gadget = g.id_gadget
+SET id_gadget = (SELECT id_gadget FROM gadgets WHERE fb.id_pers = gadgets.id_pers ORDER BY RAND() LIMIT 1)
 WHERE fb.id_forza >= 7;
 
 -- Habilidad estelar
