@@ -39,4 +39,18 @@ INSERT INTO temp_rare(id, id_rareza)
 SELECT temp_pers.id, rarezas.id_rareza
   FROM temp_pers
   JOIN rarezas ON temp_pers.nom_rareza = rarezas.nom_rareza;
+
+UPDATE temp_pers
+SET id_rareza = (SELECT tr.id_rareza FROM temp_rare tr WHERE temp_pers.id = tr.id);
+
+DROP TEMPORARY TABLE IF EXISTS temp_tip;
+CREATE TEMPORARY TABLE IF NOT EXISTS temp_rare (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_tipus INT
+);
+
+INSERT INTO temp_rare(id, id_rareza)
+SELECT temp_pers.id, tipus.id_tipus
+  FROM temp_pers
+  JOIN tipus ON temp_pers.nom_tipus = tipus.nom_tipus;
  
