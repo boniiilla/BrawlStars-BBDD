@@ -301,7 +301,7 @@ WHERE id_forza >= 8;
 UPDATE forza_brawler fb
 SET id_ref2 = 
     CASE 
-        WHEN id_pers = 1 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
+        WHEN id_pers = 1 and id_forza >= 10 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
             SELECT id_ref1 FROM forza_brawler WHERE id_pers = 1) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 2 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
             SELECT id_ref1 FROM forza_brawler WHERE id_pers = 2) ORDER BY RAND() LIMIT 1) AS refuerzos)
@@ -353,7 +353,6 @@ SET id_ref2 =
             SELECT id_ref1 FROM forza_brawler WHERE id_pers = 25) ORDER BY RAND() LIMIT 1) AS refuerzos)
         WHEN id_pers = 26 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
             SELECT id_ref1 FROM forza_brawler WHERE id_pers = 26) ORDER BY RAND() LIMIT 1) AS refuerzos)
-    END
-WHERE id_forza >= 10;
+    END;
 
 -- Aqui acabn los update para los gadget, refuerzos, hab estelares y hipercarga si tienen
