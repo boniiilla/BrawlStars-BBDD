@@ -5,13 +5,13 @@ USE brawl;
 
 CREATE TABLE rarezas (
     id_rareza INT AUTO_INCREMENT PRIMARY KEY,
-    nom_rareza VARCHAR(24),
+    nom_rareza VARCHAR(24) UNIQUE,
     color VARCHAR(24)
 );
 
 CREATE TABLE tipus (
     id_tipus INT AUTO_INCREMENT PRIMARY KEY,
-    nom_tipus VARCHAR(36),
+    nom_tipus VARCHAR(36) UNIQUE,
     descripcio TEXT
 );
 
