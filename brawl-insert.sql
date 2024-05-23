@@ -279,6 +279,31 @@ UPDATE forza_brawler fb
 SET id_ref1 = 
     CASE 
         WHEN id_pers = 1 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 2 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 3 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 4 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 5 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 6 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 7 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 8 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 9 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 10 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 11 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 12 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 13 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 14 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 15 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 16 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 17 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 18 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 19 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 20 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 21 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 22 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 23 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 24 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 25 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
+        WHEN id_pers = 26 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos ORDER BY RAND() LIMIT 1 ) AS refuerzos)
     END
 WHERE nivell >= 8;
 
