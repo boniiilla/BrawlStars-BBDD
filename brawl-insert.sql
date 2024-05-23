@@ -237,29 +237,18 @@ JOIN personatges p ON tn.nom_pers = p.nom;
 
 -- Gadgets
 
-
 UPDATE forza_brawler fb
 SET id_gadget = (SELECT id_gadget FROM gadgets WHERE fb.id_pers = gadgets.id_pers ORDER BY RAND() LIMIT 1)
 WHERE fb.id_forza >= 7;
 
 -- Habilidad estelar
 UPDATE forza_brawler fb
-JOIN (
-    SELECT id_habest, he.id_pers 
-    FROM habilitats_estelars he
-    ORDER BY RAND()
-) he ON fb.id_pers = he.id_pers
-SET fb.id_habest = he.id_habest
+SET id_habest = (SELECT id_habest FROM habilitats_estelars WHERE fb.id_pers = habilitats_estelars.id_pers ORDER BY RAND() LIMIT 1)
 WHERE fb.id_forza >= 9;
 
 -- Hipercarga
 UPDATE forza_brawler fb
-JOIN (
-    SELECT id_hiper, id_pers 
-    FROM hipercarga 
-    ORDER BY RAND()
-) hc ON fb.id_pers = hc.id_pers
-SET fb.id_hiper = hc.id_hiper
+SET id_hiper = (SELECT id_hiper FROM hipercarga WHERE fb.id_pers = hipercarga.id_pers)
 WHERE fb.id_forza = 11;
 
 -- Reforços
