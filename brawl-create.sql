@@ -21,7 +21,7 @@ CREATE TABLE personatges (
     id_rareza INT,
     id_tipus INT,
     foto LONGBLOB,
-    audio VARCHAR(64),
+    audio LONGLOB,
     descripcio TEXT,
     FOREIGN KEY (id_rareza) REFERENCES rarezas(id_rareza),
     FOREIGN KEY (id_tipus) REFERENCES tipus(id_tipus)
