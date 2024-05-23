@@ -386,5 +386,6 @@ SET id_ref2 =
         WHEN id_pers = 26 THEN (SELECT id_ref FROM (SELECT id_ref FROM reforcos WHERE id_ref NOT IN (
             SELECT id_ref1 FROM forza_brawler WHERE id_pers = 26) ORDER BY RAND() LIMIT 1) AS refuerzos)
     END;
+WHERE id_ref2 IS NULL;
 
 -- Aqui acabn los update para los gadget, refuerzos, hab estelares y hipercarga si tienen
