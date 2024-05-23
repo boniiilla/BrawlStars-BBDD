@@ -38,7 +38,9 @@ CREATE TABLE gadgets (
 
 CREATE TABLE reforcos (
     id_ref INT AUTO_INCREMENT PRIMARY KEY,
-    nom_ref VARCHAR(24)
+    nom_ref VARCHAR(24),
+    tipo VARCHAR (25),
+    descripcio TEXT
 );
 
 CREATE TABLE habilitats_estelars (
@@ -62,16 +64,21 @@ CREATE TABLE hipercarga (
 CREATE TABLE forza_brawler (
     id_forza INT AUTO_INCREMENT,
     id_pers INT,
+    nivell INT,
     vida INT,
     dany INT,
     id_gadget INT,
-    id_ref INT,
+    id_ref1 INT,
+    id_ref2 INT,
     id_habest INT,
     id_hiper INT,
     PRIMARY KEY (id_forza, id_pers),
     FOREIGN KEY (id_pers) REFERENCES personatges(id),
     FOREIGN KEY (id_gadget) REFERENCES gadgets(id_gadget),
-    FOREIGN KEY (id_ref) REFERENCES reforcos(id_ref),
+    FOREIGN KEY (id_ref1) REFERENCES reforcos(id_ref),
+    FOREIGN KEY (id_ref2) REFERENCES reforcos(id_ref),
     FOREIGN KEY (id_habest) REFERENCES habilitats_estelars(id_habest),
     FOREIGN KEY (id_hiper) REFERENCES hipercarga(id_hiper)
 );
+
+show tables;
