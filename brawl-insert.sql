@@ -60,6 +60,7 @@ SET id_tipus = (SELECT tt.id_tipus FROM temp_tip tt WHERE temp_pers.id = tt.id);
 INSERT INTO personatges(id, nom, id_rareza, id_tipus, descripcio)
 SELECT id, nom, id_rareza, id_tipus, descripcio FROM temp_pers;
 
+-- Shelly --
 UPDATE personatges
 SET foto = LOAD_FILE('/var/lib/mysql-files/shelly.jpeg')
 WHERE id = 1;
@@ -69,3 +70,25 @@ SELECT foto FROM personatges WHERE id = 1 INTO DUMPFILE '/tmp/shelly.jpeg';
 UPDATE personatges
 SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/shelly.jpeg')),1,10))
 WHERE id = 1;
+
+-- Poco --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/poco.jpeg')
+WHERE id = 2;
+
+SELECT foto FROM personatges WHERE id = 2 INTO DUMPFILE '/tmp/poco.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/poco.jpeg')),1,10))
+WHERE id = 2;
+
+-- Primo --
+UPDATE personatges
+SET foto = LOAD_FILE('/var/lib/mysql-files/primo.jpeg')
+WHERE id = 3;
+
+SELECT foto FROM personatges WHERE id = 3 INTO DUMPFILE '/tmp/primo.jpeg';
+
+UPDATE personatges
+SET foto = UNHEX(SUBSTRING(HEX(LOAD_FILE('/var/lib/mysql-files/primo.jpeg')),1,10))
+WHERE id = 3;
