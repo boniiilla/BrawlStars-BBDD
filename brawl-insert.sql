@@ -54,3 +54,5 @@ SELECT temp_pers.id, tipus.id_tipus
   FROM temp_pers
   JOIN tipus ON temp_pers.nom_tipus = tipus.nom_tipus;
  
+UPDATE temp_pers
+SET id_tipus = (SELECT tt.id_tipus FROM temp_tip tt WHERE temp_pers.id = tt.id);
