@@ -8,3 +8,23 @@ IGNORE 1 LINES
 UPDATE rarezas
 SET color = "Gris"
 WHERE nom_rareza = "Comun";
+
+UPDATE rarezas
+SET color = "Verde"
+WHERE nom_rareza = "Especial";
+
+UPDATE rarezas
+SET color = "Azul"
+WHERE nom_rareza = "SuperEspecial";
+
+UPDATE rarezas
+SET color = "Morado"
+WHERE nom_rareza = "Epico";
+
+UPDATE rarezas
+SET color = "Rojo"
+WHERE nom_rareza = "Mitico";
+
+UPDATE rarezas
+SET color = "Amarillo"
+WHERE nom_rareza = "Legendario";
